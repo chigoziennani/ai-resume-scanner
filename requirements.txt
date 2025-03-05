@@ -1,0 +1,9 @@
+flask
+torch
+transformers
+werkzeug
+pdfplumber
+pdf2image
+pytesseract
+pillow
+python-docx

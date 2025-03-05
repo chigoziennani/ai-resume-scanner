@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chi resume scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stellar-bg"></div>
+    <main class="container cosmic-float">
+        <div class="dynamic-border"></div>
+        <div class="content">
+            <h1 class="proxima-gradient">chi resume scanner</h1>
+            <p class="subdued">Artificial Intelligence Powered Tech Resume Scanner. Check what tech roles your resume is best optimized for!</p>
+            
+            <form action="/" method="post" enctype="multipart/form-data" class="quantum-upload">
+                <label class="holographic-card">
+                    <input type="file" name="resume" required style="display: none;">
+                    <div class="upload-hologram">
+                        <div class="particle-field"></div>
+                        <svg class="upload-icon" viewBox="0 0 24 24">
+                            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+                        </svg>
+                        <p class="upload-label">Drag or tap to upload resume!</p>
+                        <div class="upload-confirmation">✓ Ready to analyze!</div>
+                        <div class="file-name"></div>
+                    </div>
+                </label>
+                <button type="submit" class="fluid-button">
+                    <span class="button-liquid"></span>
+                    <span class="button-text">Analyze with CRS</span>
+                </button>
+            </form>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='animations.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+:root {
+    --space-black: #000000;
+    --deep-space: #1a1a1a;
+    --stellar-blue: #2997ff;
+    --quantum-purple: #bf5af2;
+    --hologram-teal: #32d4d4;
+    --apple-gray: #86868b;
+    --hud-green: #30d158;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--space-black);
+    color: rgba(255, 255, 255, 0.85);
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.stellar-bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(ellipse at center, 
+        rgba(41, 151, 255, 0.1) 0%,
+        rgba(41, 151, 255, 0) 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(28, 28, 30, 0.7);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border-radius: 30px;
+    padding: 2.5rem;
+    margin: 5vh auto;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.dynamic-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    padding: 2px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: borderFlow 8s linear infinite;
+}
+
+@keyframes borderFlow {
+    0% { background: conic-gradient(from 0deg, var(--stellar-blue), var(--quantum-purple), var(--hologram-teal), var(--stellar-blue)); }
+    100% { background: conic-gradient(from 360deg, var(--stellar-blue), var(--quantum-purple), var(--hologram-teal), var(--stellar-blue)); }
+}
+
+.proxima-gradient {
+    background: linear-gradient(135deg, #fff 0%, #a2a2a2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subdued {
+    color: var(--apple-gray);
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.quantum-upload {
+    position: relative;
+    margin: 3rem 0;
+}
+
+.holographic-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #007bff; /* Example border color */
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.upload-hologram {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.upload-label {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #007bff; /* Example text color */
+}
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.particle-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, 
+        rgba(46, 196, 182, 0.1) 0%, 
+        rgba(46, 196, 182, 0) 70%);
+    animation: particlePulse 4s ease-in-out infinite;
+}
+
+@keyframes particlePulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.1; transform: scale(1.05); }
+}
+
+.upload-hologram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 2rem;
+}
+
+.upload-icon {
+    width: 64px;
+    height: 64px;
+    fill: var(--stellar-blue);
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 8px rgba(41, 151, 255, 0.3));
+}
+
+.fluid-button {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    margin-top: 2rem;
+}
+
+.button-liquid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(90deg, 
+        var(--stellar-blue) 0%, 
+        var(--quantum-purple) 100%);
+    opacity: 0.15;
+    transition: opacity 0.3s ease;
+}
+
+.fluid-button:hover .button-liquid {
+    opacity: 0.25;
+}
+
+.button-text {
+    position: relative;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Advanced Results Styling */
+.breakdown-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 18px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.skill-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+}
+
+.meter-progress {
+    height: 4px;
+    background: linear-gradient(90deg, var(--stellar-blue), var(--quantum-purple));
+    border-radius: 2px;
+    transition: width 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.match-gauge {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.gauge-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--stellar-blue), var(--quantum-purple));
+    border-radius: 4px;
+    transition: width 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.photon-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.photon-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    animation: photonStream 2s infinite;
+}
+
+@keyframes photonStream {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Add to styles.css */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading .button-text {
+    visibility: hidden;
+  }
+  
+  .loading::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--stellar-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .upload-confirmation {
+    position: absolute;
+    bottom: 1rem;
+    color: var(--hud-green);
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .file-uploaded .upload-confirmation {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .file-name {
+    font-size: 0.85rem;
+    color: var(--apple-gray);
+    margin-top: 0.5rem;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .fluid-button {
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+  }
+  
+  .fluid-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(41, 151, 255, 0.15);
+  }
+  
+  .fluid-button:active {
+    transform: translateY(1px);
+  }
