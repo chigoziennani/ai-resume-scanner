@@ -1,11 +1,13 @@
 # **chi resume scanner**  
 
-This repository contains all the files for the **chi resume scanner**, an AI-powered application that analyzes tech resumes and identifies which technical roles they're best optimized for. Below is a breakdown of the project:  
+This repository contains all the files for the **chi resume scanner**, an AI-powered application that analyzes tech resumes and identifies which technical roles they're best optimized for.
+
+Below is a breakdown of the project:  
 
 ## **Project Overview**  
 
 **Goal**: Create an AI-powered resume analyzer for tech roles  
-**Algorithms/Techniques In Focus**: Zero-shot classification, Document processing, Web interface  
+**Algorithms/Techniques In Focus**: Zero-shot classification, document processing, web interface  
 
 **Description**:  
 This application uses advanced natural language processing to match resume content against over 60 technical job categories to provide instant feedback on career fit. It features a modern UI with visual feedback and supports multiple document formats.  
