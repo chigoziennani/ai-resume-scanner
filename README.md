@@ -86,7 +86,7 @@ This template presents the analysis results in a visually appealing format, show
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/chi-resume-scanner.git
+git clone https://github.com/chigoziennani/chi-resume-scanner.git
 cd chi-resume-scanner
 
 # Create and activate virtual environment (optional but recommended)
